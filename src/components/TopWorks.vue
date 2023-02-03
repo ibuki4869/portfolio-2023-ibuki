@@ -9,7 +9,11 @@
           <div class="img-pic">
             <img :src="item.image" />
           </div>
-          <h3>{{ item.title }}</h3>
+          <router-link
+            class="title"
+            :to="{ name: 'works_detail', params: { id: id[index] } }"
+            ><h3>{{ item.title }}</h3>
+          </router-link>
           <p>
             <b>言語：</b><br />{{ item.langage }}<br />
             <b>開発時期：</b><br />{{ item.period }}
@@ -31,6 +35,7 @@ export default {
   data() {
     return {
       data: [],
+      id: [],
     };
   },
   mounted: function () {
@@ -41,7 +46,7 @@ export default {
       .get()
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-          //console.log(doc.data());
+          this.id.push(doc.id);
           this.data.push(doc.data());
         });
       });
@@ -75,6 +80,9 @@ export default {
   text-overflow: ellipsis;
   white-space: nowrap;
   color: #2d4059;
+}
+.title {
+  text-decoration: none;
 }
 .img-pic {
   width: 100%;

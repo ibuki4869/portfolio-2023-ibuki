@@ -9,7 +9,11 @@
           <div class="img-pic">
             <img :src="item.image" />
           </div>
-          <h3>{{ item.title }}<br />{{ item.award }}</h3>
+          <router-link
+            class="title"
+            :to="{ name: 'works_detail', params: { id: id[index] } }"
+            ><h3>{{ item.title }}<br />{{ item.award }}</h3></router-link
+          >
           <p>
             <b>分野：</b><br />{{ item.category }}<br />
             <b>ポジション：</b><br />{{ item.position }}<br />
@@ -31,6 +35,7 @@ export default {
   data() {
     return {
       data: [],
+      id: [],
     };
   },
   mounted: function () {
@@ -40,7 +45,7 @@ export default {
       .get()
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-          //console.log(doc.data());
+          this.id.push(doc.id);
           this.data.push(doc.data());
         });
       });
@@ -83,6 +88,9 @@ export default {
 .img-pic {
   width: 100%;
   text-align: center;
+}
+.title {
+  text-decoration: none;
 }
 .img-pic img {
   width: 100%;
