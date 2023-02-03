@@ -37,15 +37,6 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: DetailView
-    },
-    {
-        path: '/link',
-        name: 'link',
-        props: true,
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: WorksView
     }
 ]
 
