@@ -111,7 +111,7 @@ a.router:hover h4 {
 }
 .detail {
   text-align: right;
-  height: 100px;
+  margin-top: 40px;
   //background: red;
   a {
     text-decoration: none;

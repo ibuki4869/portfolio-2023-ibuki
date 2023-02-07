@@ -108,11 +108,11 @@ a.router:hover h4 {
 }
 .detail {
   text-align: right;
-  height: 100px;
+  margin-top: 40px;
   //background: red;
   a {
-    color: #2d4059;
     text-decoration: none;
+    color: #2d4059;
   }
   a:hover {
     color: #ea5455;

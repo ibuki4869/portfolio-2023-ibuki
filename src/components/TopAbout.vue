@@ -21,10 +21,10 @@
             座右の銘:&nbsp;ASSUME INNOCENCE<br />
           </p>
         </div>
-        <div class="detail">
-          <router-link to="/about">More&#9654; </router-link>
-        </div>
       </div>
+    </div>
+    <div class="detail">
+      <router-link to="/about">More&#9654; </router-link>
     </div>
   </div>
 </template>
@@ -36,6 +36,8 @@
 <style scoped lang="scss">
 .main {
   height: 100%;
+  width: 80%;
+  margin: auto;
   //background-color:red;
 }
 .top-area {
@@ -43,7 +45,7 @@
 }
 .mid-area {
   height: 50%;
-  width: 80%;
+  width: 100%;
   margin: auto;
   display: flex;
   //background-color:green;
