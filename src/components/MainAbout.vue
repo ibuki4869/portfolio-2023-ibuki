@@ -32,7 +32,14 @@
     <div class="mid-area">
       <div class="myname">
         <div v-for="(item, index) in data" :key="index">
-          {{ item.date }}&nbsp;&nbsp;{{ item.title }}<br />
+          <div v-if="item.id">
+            <router-link :to="{ name: 'works_detail', params: { id: item.id } }"
+              >{{ item.date }}&nbsp;&nbsp;{{ item.title }}</router-link
+            ><br />
+          </div>
+          <div v-if="!item.id">
+            {{ item.date }}&nbsp;&nbsp;{{ item.title }}<br />
+          </div>
         </div>
       </div>
     </div>
