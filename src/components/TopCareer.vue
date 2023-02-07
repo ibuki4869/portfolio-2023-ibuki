@@ -9,7 +9,7 @@
           <div class="img-pic">
             <img :src="item.image" />
           </div>
-          <h3>{{ item.campany }}</h3>
+          <h3>{{ item.title }}</h3>
           <p>
             <b>ポジション：</b><br />{{ item.position }}<br />
             <b>形態：</b><br />{{ item.status }}<br />
@@ -36,11 +36,12 @@ export default {
     };
   },
   mounted: function () {
-    db.collection("career")
+    db.collection("works")
+      .where("kind", "==", "career")
+      .orderBy("date", "desc")
       .get()
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-          //console.log(doc.data());
           this.data.push(doc.data());
         });
       });
