@@ -10,7 +10,7 @@
             <img :src="item.image" />
           </div>
           <router-link
-            class="title"
+            class="router"
             :to="{ name: 'works_detail', params: { id: id[index] } }"
             ><h3>{{ item.title }}<br />{{ item.award }}</h3></router-link
           >
@@ -89,8 +89,12 @@ export default {
   width: 100%;
   text-align: center;
 }
-.title {
+.router {
   text-decoration: none;
+}
+a.router:hover,
+a.router:hover h3 {
+  color: #ea5455;
 }
 .img-pic img {
   width: 100%;

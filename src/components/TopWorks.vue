@@ -10,7 +10,7 @@
             <img :src="item.image" />
           </div>
           <router-link
-            class="title"
+            class="router"
             :to="{ name: 'works_detail', params: { id: id[index] } }"
             ><h3>{{ item.title }}</h3>
           </router-link>
@@ -81,8 +81,12 @@ export default {
   white-space: nowrap;
   color: #2d4059;
 }
-.title {
+.router {
   text-decoration: none;
+}
+a.router:hover,
+a.router:hover h3 {
+  color: #ea5455;
 }
 .img-pic {
   width: 100%;

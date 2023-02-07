@@ -11,7 +11,7 @@
       </div>
       <div class="mid-sep">
         <router-link
-          class="title"
+          class="router"
           :to="{ name: 'works_detail', params: { id: id[index] } }"
           ><h4>{{ item.title }}</h4></router-link
         >
@@ -89,8 +89,12 @@ export default {
   margin-top: 0;
   color: #2d4059;
 }
-.title {
+.router {
   text-decoration: none;
+}
+a.router:hover,
+a.router:hover h4 {
+  color: #ea5455;
 }
 .img-pic {
   width: 100%;
