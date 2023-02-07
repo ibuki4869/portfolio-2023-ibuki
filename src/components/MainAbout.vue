@@ -33,8 +33,10 @@
       <div class="myname">
         <div v-for="(item, index) in data" :key="index">
           <div v-if="item.id">
-            <router-link :to="{ name: 'works_detail', params: { id: item.id } }"
-              >{{ item.date }}&nbsp;&nbsp;{{ item.title }}</router-link
+            {{ item.date }}&nbsp;&nbsp;<router-link
+              :to="{ name: 'works_detail', params: { id: item.id } }"
+              class="router"
+              ><span>{{ item.title }}</span></router-link
             ><br />
           </div>
           <div v-if="!item.id">
@@ -114,8 +116,13 @@ export default {
   text-align: left;
   //background-color:red;
 }
-.detail {
-  text-align: right;
+.router {
+  color: #2d4059;
+  //text-decoration: none;
+}
+a.router:hover,
+a.router:hover span {
+  color: #ea5455;
 }
 </style>
    
