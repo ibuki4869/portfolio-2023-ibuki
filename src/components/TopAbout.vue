@@ -10,11 +10,16 @@
       <div class="mid-sep">
         <div class="myname">
           <h2>森 伊吹 (もり いぶき)</h2>
-          <p>出身:岡山県</p>
-          <p>在住:広島県</p>
-          <p>最終学歴:東京理科大学 理工学部 物理学科</p>
-          <p>現職:プロジェクトマネージャー</p>
-          <p>座右の銘:我以外皆我師</p>
+          <p>
+            出身:&nbsp;兵庫県生まれ岡山県育ち<br />
+            在住:&nbsp;広島県<br />
+            現職:&nbsp;プロジェクトマネージャー<br />
+            座右の銘:&nbsp;我以外皆我師<br />
+            得意なこと:&nbsp;早寝早起き<br />
+            苦手なこと:&nbsp;短距離走<br />
+            現職:&nbsp;プロジェクトマネージャー<br />
+            座右の銘:&nbsp;ASSUME INNOCENCE<br />
+          </p>
         </div>
         <div class="detail">
           <router-link to="/about">More&#9654; </router-link>
