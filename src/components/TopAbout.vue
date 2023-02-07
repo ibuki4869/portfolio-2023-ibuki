@@ -52,7 +52,8 @@
   text-align: center;
 }
 .face-pic img {
-  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
   margin: auto;
 }
 .myname {
