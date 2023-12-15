@@ -27,7 +27,7 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: "メイリオ";
+  font-family: "メイリオ", "Meiryo", "MS ゴシック";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   //text-align: center;
